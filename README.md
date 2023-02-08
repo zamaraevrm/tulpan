@@ -1,4 +1,4 @@
-# diplom
+# tulpan
 
 ## Project setup
 ```

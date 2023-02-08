@@ -97,19 +97,23 @@ export default {
   width: 150px;
 }
 .root {
-    width:628px;
-    height: 290px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width:auto;
+    height: 100%;
     background-color: #FFDBF3;
-    border-radius: 32px;
+    border-radius: 15px;
     text-align:center;
 }
 input {
-    width:466px;
+    /*width:466px;*/
     margin-bottom: 20px;
     height:40px;
     border-radius: 10px;
     border: 0px;
-    padding-left: 15px;
+    /*padding-left: 15px;*/
     font-size: 22px;
     font-family: TTCommons Regular;
 }

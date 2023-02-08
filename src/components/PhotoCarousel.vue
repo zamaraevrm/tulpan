@@ -1,16 +1,14 @@
-
 <template>
     <Carousel>
     <Slide :key="slide">
-      <img width="500" src="../assets/image1.png" class="unselectable" draggable="false">
+      <img src="../assets/image1.png" class="unselectable" draggable="false">
     </Slide>
     <Slide :key="slide">
-      <img width="500" src="../assets/image2.jpg" class="unselectable" draggable="false">
+      <img src="../assets/image2.jpg" class="unselectable" draggable="false">
     </Slide>
     <Slide :key="slide">
-      <img width="500" src="../assets/image3.jpg" class="unselectable" draggable="false">
+      <img src="../assets/image3.jpg" class="unselectable" draggable="false">
     </Slide>
-
      <template #addons>
       <Navigation />
     </template>
@@ -24,7 +22,6 @@ export default {
   name: 'PhotoCarousel',
   data () {
     return {
-        
     }
   },
   components: {
@@ -34,14 +31,10 @@ export default {
      Navigation,
   },
   methods:{
-      
   }
 }
 </script>
 <style>
-img {
-  border-radius:15px;
-}
 .unselectable {
   user-drag: none; 
   user-select: none;
@@ -50,10 +43,38 @@ img {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
 .carousel {
-  width:610px;
+  border-radius: 15px;
+  width: auto;
 }
-.carousel__pagination-item {
-  margin-top: -6%;
+.carousel li{
+  width: 100%!important;
+}
+.carousel img{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+@media (max-width: 800px) {
+  .carousel {
+    border-radius: 15px;
+    /*height: 100px;*/
+  }
+
+  .carousel img {
+    border-radius: 15px;
+    width: 100%;
+  }
+
+  .carousel button {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .carousel__pagination-item {
+    /*margin-top: -6%;*/
+  }
 }
 </style>

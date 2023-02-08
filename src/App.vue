@@ -1,24 +1,24 @@
 <template>
   <div class="header">
     <div class="elements">
-      <div class="element1">
-        НОВОСИБИРСК<br>
+      <div class="element">
+        НОВОСИБИРСК
         ул. Ленина, д. 3
       </div>
-      <div class="element2">
-        C 10:00 до 22:00<br>
+      <div class="element">
+        C 10:00 до 22:00
         ежедневно
       </div>
-      <div class="element3">
+      <div class="element">
         <img src="../src/assets/whatsapp.png"/>
         <img src="../src/assets/telegram.png"/>
         
       </div>
-      <div class="element4">
+      <div class="element">
         +7 (905) 953-90-93
       </div>
     </div>
-  </div><br>
+  </div>
   <div class="mainblock">
     <div class="ticket">
       <MainPage/>
@@ -51,6 +51,10 @@ export default {
 
 
 <style>
+*{
+  margin: 0;
+  padding: 0;
+}
 .unselectable {
   user-drag: none; 
   user-select: none;
@@ -69,124 +73,73 @@ export default {
   pointer-events: none;
 }
 body {
+  margin: 1%;
   background-color: #F09D9D;
 }
-
 .header {
-  background-color: #FFDBF3;
-  height: 97px;
-  display: table;
+  border-radius: 15px;
   width: 100%;
-  
-}
-.mainblock {
-  position: relative;
-  display:flex;
-  height:500px;
-  margin-top:7%;
-}
-.ticket {
-  margin-left:14%;
-  margin-top:3%;
-  z-index: 1;
-  display:flex;
-}
-.app {
-  margin-left:9%;
-  z-index: 0;
-}
-.elements {
-  display: flex;
-  text-align: center;
-  margin-top:1.5%;
-  font-family: TTCommons Regular;
-  font-size:20px;
-  color: #43290A;
-}
-.element1 {
-  border-right: 0px;
-  align-items: center;
-  display: inline-block;
-}
-.element2 {
-  border-right: 0px;
-  align-items: center;
-  display: inline-block;
-}
-.element3 {
-  border-right: 0px;
-  align-items: center;
-  margin-top:-10px;
-  display: inline-block;
-}
-.element4 {
-  border-right: 0px;
-  align-items: center;
-  display: inline-block;
-  margin-top:10px;
-}
-@media screen and (max-width: 980px) {
-  .header {
   background-color: #FFDBF3;
-  height: 97px;
   display: table;
 }
-body {
-  justify-content: center;
-  margin-left:auto;
-  width: 100vw;
-  height: 100vh;
-}
 .mainblock {
-  position: relative;
-  display:block;
-  height:500px;
-  margin-top:7%;
-  
-  
+  display: flex;
+  margin-top: 5%;
 }
-.ticket {
-  margin-top:3%;
-  z-index: 1;
-  display:flex;
-  float:left;
-}
-.app {
-  z-index: 0;
-  float:left;
-}
+
 .elements {
-  display: flexbox;
-  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
   margin-top:1.5%;
   font-family: TTCommons Regular;
   font-size:20px;
   color: #43290A;
 }
-.element1 {
+.element {
+  justify-content: center;
   border-right: 0px;
-  align-items: center;
   display: inline-block;
 }
-.element2 {
-  border-right: 0px;
-  align-items: center;
-  display: inline-block;
+.ticket {
+  margin: 5%;
+  width: 50%;
+  z-index: 1;
 }
-.element3 {
-  border-right: 0px;
-  align-items: center;
-  margin-top:-10px;
-  display: inline-block;
+.app {
+  margin: 5%;
+  width: 50%;
+  z-index: 0;
 }
-.element4 {
-  border-right: 0px;
-  align-items: center;
-  display: inline-block;
-  margin-top:10px;
+
+@media (max-width: 800px){
+  .header{
+    width: auto;
+    margin: 15px;
+    border-radius: 15px;
+  }
+  .elements{
+    font-size: 16px;
+  }
+  .element:last-child{
+    float:left;
+  }
+  .element:nth-child(3){
+    float: bottom;
+  }
+  .ticket{
+    width: auto;
+    margin-bottom: 15px;
+  }
+  .app{
+    width: auto;
+  }
+  .mainblock{
+    display: block;
+    margin: 15px;
+  }
 }
-  
-}
+
 @font-face {
   font-family: TTCommons Regular;
   src: url(../src/fonts/TTCommons/TTCommons-Regular.ttf);

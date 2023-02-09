@@ -12,7 +12,6 @@
       <div class="element">
         <img src="../src/assets/whatsapp.png"/>
         <img src="../src/assets/telegram.png"/>
-        
       </div>
       <div class="element">
         +7 (905) 953-90-93
@@ -69,11 +68,9 @@ export default {
 }
 .logotype img {
   display: inline-block;
-  padding: 50px;
   pointer-events: none;
 }
 body {
-  margin: 1%;
   background-color: #F09D9D;
 }
 .header {
@@ -84,11 +81,12 @@ body {
   text-align:center;
 }
 .mainblock {
+  margin-left: 10%;
+  margin-right: 10%;
   display: flex;
   margin-top: 5%;
   margin-bottom: 5vh;
 }
-
 .elements {
   align-items: center;
   display: flex;
@@ -104,46 +102,91 @@ body {
   display: inline-block;
 }
 .ticket {
-  margin-top: 15vh;
-  margin-left: 10vw;
-  width: 30%;
-  height: 20vh;
+  margin: 0 5% 0 5%;
+  width: 50%;
   z-index: 1;
 }
 .app {
-  margin-left:17%;
-  margin-top:4%;
-  width: 40%;
+  margin: 0 5% 0 5%;
+  width: 50%;
   z-index: 0;
 }
-
-@media (max-width: 800px){
-  .header{
+/*Smartphone*/
+@media (max-width: 420px){
+  body{
     width: 100%;
-    margin: 15px;
-    border-radius: 15px;
+    height: 100%;
   }
   .elements{
-    font-size: 14px;
+    flex-direction: column;
   }
-  .element:last-child{
-    float:left;
+  .element:first-child{
+    font-size: 26px;
   }
-  .element:nth-child(3){
-    float: bottom;
+  .element:nth-child(2){
+    font-size: 16px;
   }
-  .ticket{
+  .header{
+    display: block;
+    margin: 15px;
     width: auto;
     margin-bottom: 15%;
-    margin-left:0%;
+    border-radius: 15px;
+  }
+  .ticket{
+    width: 80%;
+    margin-bottom: 15%;
+    margin-right: auto;
+    margin-left: auto;
   }
   .app{
-    width: auto;
-    margin-left:0%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
   }
   .mainblock{
     display: block;
     margin: 15px;
+  }
+  .logotype{
+    margin: 15px;
+    width: auto;
+    height: auto;
+  }
+}
+/*Pad*/
+@media (max-width: 820px) and (min-width: 420px){
+  body{
+    overflow:hidden;
+    width: auto;
+    height: 100vh;
+  }
+  .header{
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 15px;
+  }
+  .elements{
+    font-size: 20px;
+  }
+  .ticket{
+    height: 100%;
+    width: auto;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .app{
+    height: 100%;
+    width: auto;
+    margin:0;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .mainblock{
+    height: auto;
+    display: block;
+    margin: 5%;
   }
 }
 

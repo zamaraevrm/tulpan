@@ -102,7 +102,6 @@ export default {
     align-items: center;
     display: flex;
     width:auto;
-    height: 100%;
     background-color: #FFDBF3;
     border-radius: 15px;
     text-align:center;
@@ -145,14 +144,15 @@ button {
   font-family: TTCommons Light;
   src: url(../fonts/TTCommons/TTCommons-Light.ttf);
 }
-@media (max-width: 800px){
+/*Smartphone*/
+@media (max-width: 420px){
   .modalHigh {
     font-family: TTCommons DemiBold;
     font-size: 40px;
   }
   .modalDown {
-      font-family: TTCommons Regular;
-      font-size: 20px;
+    font-family: TTCommons Regular;
+    font-size: 20px;
   }
   .modal-overlay {
     position: fixed;
@@ -177,51 +177,42 @@ button {
     margin: 10% 0 0 16px;
     cursor: pointer;
   }
-
   .close-img {
     width: 25px;
     margin-right:0px;
   }
-
   .check {
     width: 150px;
   }
   .root {
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      display: flex;
-      width:auto;
-      height: 120%;
-      background-color: #FFDBF3;
-      border-radius: 15px;
-      text-align:center;
-      padding:0%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width:auto;
+    background-color: #FFDBF3;
+    border-radius: 15px;
+    text-align:center;
   }
   .form {
     width:60%;
   }
-  input {
-      /*width:466px;*/
-      margin-bottom: 20px;
-      height:40px;
-      border-radius: 10px;
-      border: 0px;
-      width:100%;
-      padding-left: 15px;
-      font-size: 20px;
-      font-family: TTCommons Regular;
+}
+/*Pad*/
+@media (max-width: 820px) and (min-width: 420px){
+  .carousel {
+    border-radius: 15px;
+    /*height: 100px;*/
+    width:auto;
   }
-  button {
-      background-color: #FFBCBC;
-      width:90px;
-      height:45px;
-      border:none;
-      border-radius:10px;
-      font-family: TTCommons Regular; 
-      color:white;
-      font-size:16px;
-      cursor:default;
+  .carousel img {
+    border-radius: 15px;
+    width: 100%;
+  }
+  .carousel button {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
   }
 }
+
 </style>

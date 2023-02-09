@@ -46,7 +46,6 @@ export default {
 
 .carousel {
   border-radius: 15px;
-  width: 70%;
 }
 .carousel li{
   width: 100%!important;
@@ -56,26 +55,36 @@ export default {
   height: 100%;
   border-radius: 15px;
 }
-
-@media (max-width: 800px) {
+/*Smartphone*/
+@media (max-width: 420px) {
   .carousel {
     border-radius: 15px;
     /*height: 100px;*/
     width:auto;
   }
-
   .carousel img {
     border-radius: 15px;
     width: 100%;
   }
-
   .carousel button {
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.6);
   }
-
-  .carousel__pagination-item {
-    /*margin-top: -6%;*/
+}
+/*Pad*/
+@media (max-width: 820px) and (min-width: 420px){
+  .carousel {
+    border-radius: 15px;
+    /*height: 100px;*/
+    width:auto;
+  }
+  .carousel img {
+    border-radius: 15px;
+    width: 100%;
+  }
+  .carousel button {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
   }
 }
 </style>

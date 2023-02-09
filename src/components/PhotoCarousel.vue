@@ -1,5 +1,5 @@
 <template>
-    <Carousel>
+    <Carousel :autoplay="2000" :wrap-around="true">
     <Slide :key="slide">
       <img src="../assets/image1.png" class="unselectable" draggable="false">
     </Slide>

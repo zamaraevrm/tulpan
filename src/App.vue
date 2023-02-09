@@ -2,11 +2,11 @@
   <div class="header">
     <div class="elements">
       <div class="element">
-        НОВОСИБИРСК
+        НОВОСИБИРСК<br>
         ул. Ленина, д. 3
       </div>
       <div class="element">
-        C 10:00 до 22:00
+        C 10:00 до 22:00<br>
         ежедневно
       </div>
       <div class="element">
@@ -81,17 +81,19 @@ body {
   width: 100%;
   background-color: #FFDBF3;
   display: table;
+  text-align:center;
 }
 .mainblock {
   display: flex;
   margin-top: 5%;
+  margin-bottom: 5vh;
 }
 
 .elements {
   align-items: center;
   display: flex;
+  margin:1vh;
   justify-content: space-around;
-  margin-top:1.5%;
   font-family: TTCommons Regular;
   font-size:20px;
   color: #43290A;
@@ -102,24 +104,27 @@ body {
   display: inline-block;
 }
 .ticket {
-  margin: 5%;
-  width: 50%;
+  margin-top: 15vh;
+  margin-left: 10vw;
+  width: 30%;
+  height: 20vh;
   z-index: 1;
 }
 .app {
-  margin: 5%;
-  width: 50%;
+  margin-left:17%;
+  margin-top:4%;
+  width: 40%;
   z-index: 0;
 }
 
 @media (max-width: 800px){
   .header{
-    width: auto;
+    width: 100%;
     margin: 15px;
     border-radius: 15px;
   }
   .elements{
-    font-size: 16px;
+    font-size: 14px;
   }
   .element:last-child{
     float:left;
@@ -129,10 +134,12 @@ body {
   }
   .ticket{
     width: auto;
-    margin-bottom: 15px;
+    margin-bottom: 15%;
+    margin-left:0%;
   }
   .app{
     width: auto;
+    margin-left:0%;
   }
   .mainblock{
     display: block;

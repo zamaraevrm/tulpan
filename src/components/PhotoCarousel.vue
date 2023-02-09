@@ -46,7 +46,7 @@ export default {
 
 .carousel {
   border-radius: 15px;
-  width: auto;
+  width: 70%;
 }
 .carousel li{
   width: 100%!important;
@@ -61,6 +61,7 @@ export default {
   .carousel {
     border-radius: 15px;
     /*height: 100px;*/
+    width:auto;
   }
 
   .carousel img {

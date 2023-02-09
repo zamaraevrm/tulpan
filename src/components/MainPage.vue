@@ -2,9 +2,8 @@
     <div class="root">
         <p style = "font-family: TTCommons DemiBold; font-size:32px;">Оставить заявку</p>
         <div class="form">
-            <input v-model="name" placeholder="Введите имя" @input="toggleButton()"/><br>
+            <input v-model="name" maxlength = "15" placeholder="Введите имя" @input="toggleButton(),validateName()"/>
             <input v-model="phone" type="tel" @input="toggleButton()" placeholder="+7(911) 111-11-11" v-maska data-maska="+7 (###) ###-##-##"/>
-            <br>
             <button id="submitButton" @click="submit(), showmodal=true" disabled>Отправить</button>
         </div>
     </div>
@@ -50,6 +49,9 @@ export default {
                 document.getElementById('submitButton').style = 'cursor: default;'
                 document.getElementById('submitButton').style.background = '#FFBCBC';
             }
+        },
+        validateName() {
+          event.target.value = event.target.value.replace(/[^A-Za-zА-Яа-я\s]/g, '')
         }
     }
 }
@@ -87,12 +89,10 @@ export default {
   margin: 10% 0 0 16px;
   cursor: pointer;
 }
-
 .close-img {
   width: 25px;
   margin-right:0px;
 }
-
 .check {
   width: 150px;
 }
@@ -106,6 +106,10 @@ export default {
     background-color: #FFDBF3;
     border-radius: 15px;
     text-align:center;
+    padding:5%;
+}
+.form {
+  width:20vw;
 }
 input {
     /*width:466px;*/
@@ -113,8 +117,9 @@ input {
     height:40px;
     border-radius: 10px;
     border: 0px;
-    /*padding-left: 15px;*/
-    font-size: 22px;
+    width:100%;
+    padding-left: 15px;
+    font-size: 20px;
     font-family: TTCommons Regular;
 }
 button {
@@ -139,5 +144,84 @@ button {
 @font-face {
   font-family: TTCommons Light;
   src: url(../fonts/TTCommons/TTCommons-Light.ttf);
+}
+@media (max-width: 800px){
+  .modalHigh {
+    font-family: TTCommons DemiBold;
+    font-size: 40px;
+  }
+  .modalDown {
+      font-family: TTCommons Regular;
+      font-size: 20px;
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #000000da;
+  }
+  .modal {
+    text-align: center;
+    background-color: white;
+    height: 500px;
+    width: 500px;
+    margin-top: 10%;
+    padding: 60px 0;
+    border-radius: 20px;
+  }
+  .close {
+    margin: 10% 0 0 16px;
+    cursor: pointer;
+  }
+
+  .close-img {
+    width: 25px;
+    margin-right:0px;
+  }
+
+  .check {
+    width: 150px;
+  }
+  .root {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      width:auto;
+      height: 120%;
+      background-color: #FFDBF3;
+      border-radius: 15px;
+      text-align:center;
+      padding:0%;
+  }
+  .form {
+    width:60%;
+  }
+  input {
+      /*width:466px;*/
+      margin-bottom: 20px;
+      height:40px;
+      border-radius: 10px;
+      border: 0px;
+      width:100%;
+      padding-left: 15px;
+      font-size: 20px;
+      font-family: TTCommons Regular;
+  }
+  button {
+      background-color: #FFBCBC;
+      width:90px;
+      height:45px;
+      border:none;
+      border-radius:10px;
+      font-family: TTCommons Regular; 
+      color:white;
+      font-size:16px;
+      cursor:default;
+  }
 }
 </style>
